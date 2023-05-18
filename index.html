@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="input-group">
+        <input
+          id="soNhap"
+          type="number"
+          class="form-control"
+          placeholder="Nhập vào số n"
+        />
+        <div class="w-100 mt-3">
+          <button class="btn btn-primary" id="btn">Thêm số</button>
+        </div>
+      </div>
+      <div class="alert alert-success mt-3">
+        👉
+        <span id="themSo"></span>
+      </div>
+      <div>
+        <div class="accordion mt-5" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <i class="fa-solid fa-1"></i>
+                  Tổng số dương
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-tong-so-duong" class="btn btn-primary">
+                  Tính tổng
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-tong-so-duong"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="collapseTwo"
+                >
+                  <i class="fa-solid fa-2"></i>
+                  Đếm số dương
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseTwo"
+              class="collapse show"
+              aria-labelledby="headingTwo"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-dem-so-duong" class="btn btn-primary">
+                  Đếm số
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-dem-so-duong"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="true"
+                  aria-controls="collapseThree"
+                >
+                  <i class="fa-solid fa-3"></i>
+                  Tìm số nhỏ nhất
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseThree"
+              class="collapse show"
+              aria-labelledby="headingThree"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-tim-so-nho-nhat" class="btn btn-primary">
+                  Tìm số nhỏ nhất
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span class="ket-qua-so-nho-nhat"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFour"
+                  aria-expanded="true"
+                  aria-controls="collapseFour"
+                >
+                  <i class="fa-solid fa-4"></i>
+                  Tìm số dương nhỏ nhất
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseFour"
+              class="collapse show"
+              aria-labelledby="headingFour"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-tim-so-duong-nho-nhat" class="btn btn-primary">
+                  Tìm dương số nhỏ nhất
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-so-duong-nho-nhat"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFive"
+                  aria-expanded="true"
+                  aria-controls="collapseFive"
+                >
+                  <i class="fa-solid fa-5"></i>
+                  Tìm số chẵn cuối cùng
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseFive"
+              class="collapse show"
+              aria-labelledby="headingFive"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-tim-so-chan" class="btn btn-primary">
+                  Tìm số chẵn
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-so-chan"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseSix"
+                  aria-expanded="true"
+                  aria-controls="collapseSix"
+                >
+                  <i class="fa-solid fa-6"></i>
+                  Đổi chỗ
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseSix"
+              class="collapse show"
+              aria-labelledby="headingSix"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <div>
+                  <form class="d-flex">
+                    <div class="form-group col-3 pl-0">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="vi-tri-1"
+                        placeholder="Nhập vào vị trí số 1"
+                      />
+                    </div>
+                    <div class="form-group col-3 pl-0">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="vi-tri-2"
+                        placeholder="Nhập vào vị trí số 2"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <button id="btn-tim-doi-cho" class="btn btn-primary">
+                  Đổi chỗ
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-doi-cho"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseSeven"
+                  aria-expanded="true"
+                  aria-controls="collapseSeven"
+                >
+                  <i class="fa-solid fa-7"></i>
+                  Sắp xếp tăng dần
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseSeven"
+              class="collapse show"
+              aria-labelledby="headingSeven"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-sap-xep" class="btn btn-primary">
+                  Sắp xếp
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-sap-xep"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingEight">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseEight"
+                  aria-expanded="true"
+                  aria-controls="collapseEight"
+                >
+                  <i class="fa-solid fa-8"></i>
+                  Tìm số nguyên tố đầu tiên
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseEight"
+              class="collapse show"
+              aria-labelledby="headingEight"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-tim-so-nguyen-to" class="btn btn-primary">
+                  Tìm số nguyên tố
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-tim-so-nguyen-to"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingNine">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseNine"
+                  aria-expanded="true"
+                  aria-controls="collapseNine"
+                >
+                  <i class="fa-solid fa-9"></i>
+                  Đếm số nguyên
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseNine"
+              class="collapse show"
+              aria-labelledby="headingNine"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <div class="input-group">
+                  <input
+                    id="nhap-so-them-vao-mang"
+                    type="number"
+                    class="form-control w-50 mr-5"
+                    placeholder="Nhập số"
+                    style="flex: none"
+                  />
+                  <div class="">
+                    <button class="btn btn-primary" id="btn-them-so">
+                      Thêm số
+                    </button>
+                  </div>
+                </div>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-them-mang-so"></span>
+                </div>
+                <button id="btn-dem-so-nguyen" class="btn btn-primary mt-4">
+                  Đếm số nguyên
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-dem-so-nguyen"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTen">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTen"
+                  aria-expanded="true"
+                  aria-controls="collapseTen"
+                >
+                  <i class="fa-solid fa-1"></i>
+                  <i class="fa-solid fa-0" style="margin-left: -2px"></i>
+                  So sánh số lượng âm và dương
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </h2>
+            </div>
+
+            <div
+              id="collapseTen"
+              class="collapse show"
+              aria-labelledby="headingTen"
+              data-parent="#accordionExample"
+            >
+              <div class="card-body">
+                <button id="btn-so-sanh" class="btn btn-primary">
+                  So sánh
+                </button>
+                <div class="alert alert-success mt-3">
+                  👉
+                  <span id="ket-qua-so-sanh"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br />
+    </div>
+    <script src="./index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
